@@ -9,7 +9,13 @@ This repository only hosts the **releases** (downloads). The viewer's source cod
 
 ## Download
 
-Get the latest `DayZViewer-<version>-win-x64.zip` from **[Releases](../../releases/latest)**.
+From **[Releases](../../releases/latest)**, pick one:
+
+- `DayZViewer-<version>-Setup.exe` — **installer**: Start menu entry, optional desktop shortcut and "Open with" for
+  `.p3d` files, uninstall via *Settings → Apps*. Installs for your user only, no admin rights needed.
+- `DayZViewer-<version>-win-x64.zip` — **portable**: unzip anywhere and run, nothing is installed.
+
+Both are the same program and both update themselves.
 
 ## Features
 
@@ -34,21 +40,26 @@ Get the latest `DayZViewer-<version>-win-x64.zip` from **[Releases](../../releas
 
 ## Install
 
-1. Unzip into a folder of your own (for example `D:\Tools\DayZViewer`), **not** into *Program Files* — the viewer
-   updates itself and needs write access to its folder.
-2. Start `DayZViewer.exe` and open a `.p3d` (or drop it into the window).
+**Installer:** run `DayZViewer-<version>-Setup.exe`. It installs to `%LOCALAPPDATA%\Programs\DayZ Material Viewer`.
+
+**Portable:** unzip into a folder of your own (for example `D:\Tools\DayZViewer`), **not** into *Program Files* —
+the viewer updates itself and needs write access to its folder. Start `DayZViewer.exe`.
+
+Then open a `.p3d` (or drop it into the window).
 
 The viewer is not code-signed. On the first start Windows SmartScreen may show *"Windows protected your PC"*:
-click **More info → Run anyway**. Settings are stored in `%APPDATA%\DayZViewer`, not in the program folder.
+click **More info → Run anyway**. Settings are stored in `%APPDATA%\DayZViewer`, not in the program folder, and are
+kept when you uninstall.
 
 ## Updates
 
 *Settings → Updates*: the viewer looks for a new release at start (once a day, can be switched off) or when you click
 **Check now**. **Install and restart** downloads the zip, verifies its SHA-256 checksum and replaces the program
-files. Each release also lists the checksum, so you can check a manual download:
+files — for the installed and the portable version alike. Each release also lists the checksums, so you can check a
+manual download:
 
 ```
-Get-FileHash .\DayZViewer-<version>-win-x64.zip -Algorithm SHA256
+Get-FileHash .\DayZViewer-<version>-Setup.exe -Algorithm SHA256
 ```
 
 ## Feedback
