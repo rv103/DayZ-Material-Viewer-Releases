@@ -17,6 +17,11 @@ From **[Releases](../../releases/latest)**, pick one:
 
 Both are the same program and both update themselves.
 
+- `RwG-DayZ-Shader-Complete-<version>.zip` — **complete package**: the viewer installer plus everything around it:
+  the P drive content (supports, Buldozer live script), the Substance Painter viewport shaders and the
+  [RwG DayZ Texture Exporter](https://github.com/rv103/RwG_DayZ_Painter_Plugin) plugin, and two Blender extensions
+  (*DayZ Viewer Link*, *RwG DayZ Maps*). Its `README.txt` explains where each part goes.
+
 ## Features
 
 - **Super shader rebuilt 1:1** — `_co`, `_nohq`, `_smdi`, `_as`, `_mc`, detail, env, fresnel(N,K) and emissive stages
@@ -27,7 +32,19 @@ Both are the same program and both update themselves.
   into the rvmat; try other textures per stage (preview only).
 - **Proxies** — magazines, optics, stocks: shown in place, each with its own materials.
 - **Live link to Substance Painter** — with the [RwG DayZ Texture Exporter](https://github.com/rv103/RwG_DayZ_Painter_Plugin)
-  plugin, exported textures and rvmat values appear at once, and material edits go back to Painter.
+  plugin, the exported maps of each texture set land on the stages of its rvmat, rvmat values appear at once, and
+  material edits go back to Painter. Painter can open Buldozer or the RwG Viewer World directly.
+- **Live link to Blender** — the *DayZ Viewer Link* extension exports through Arma 3 Object Builder and shows the
+  model in the viewer, following Blender's camera and sun.
+- **Buldozer and RwG Viewer World** — open the model in Buldozer (started by the viewer, no Object Builder needed,
+  night included) or placed on the ground of a DayZ world; material edits, textures, variants, proxies and the light
+  preset follow live, and the camera follows both ways.
+- **Config variants** — the `hiddenSelections` textures/materials of your `config.cpp`, switchable, with an editor
+  that writes the config snippet.
+- **Structure** — geometry, view/fire geometry, memory points and other special LODs as lines over the model, named
+  properties and selections per LOD; Object Builder scripts (*Check model*) run headless.
+- **Surroundings** — sky and grass ground from the game's lighting, optional support (concrete block, wood planks,
+  table or your own model) under the model.
 - **Hot reload** — save a texture or rvmat and the viewer updates.
 - English and German UI.
 
